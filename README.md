@@ -41,18 +41,8 @@ Make http request easily ⬆⬇
 
    async function getPosts() {
    	try {
-   		// By default will use "GET" method
+   		// By default will use {url:'', methot:'GET'}, you can change it when you need it
    		const response = await http({ url: 'https://example.com/posts' })
-   		//post example
-   		/*
-   		const response = await http({url:'https://example.com/posts/1'},
-   		method'POST',
-   		body:{
-   			name:'Jeff',
-   			lastname:'Mejía',
-   			postContent:'I like coffee too much ☕'
-   			})
-   		*/
    		console.log(response)
    	} catch (error) {
    		console.log(error)
@@ -66,4 +56,4 @@ Make http request easily ⬆⬇
 
 ## 2. Author
 
-[Jefferson Mejía](https://jeffersonmejia.github.io/blog/){:target="\_blank"} - Eng. Systems, Web developer
+<a href="https://jeffersonmejia.github.io/blog" target="_blank">Jefferson Mejía</a> - Eng. Systems, Web developer

@@ -1,26 +1,27 @@
-const MAX_WAIT = 5000,
-	controller = new AbortController(),
-	signal = controller.signal
+const MAX_WAIT = 5000
 
-export async function http() {
-	const get = async (url) => {
-		try {
-			const options = {
-				method: 'GET',
-				headers: {
-					'Content-Type': 'application/json',
-				},
-				signal,
-			}
-			setTimeout(() => controller.abort(), MAX_WAIT)
-			const response = await fetch(url, options)
-			if (!response.ok) throw new Error('Rejected request')
-			const json = await response.json()
-			return { data: json }
-		} catch (error) {
-			return { error: error.message }
-		}
+export async function http({ url, method = 'GET', body = null }) {
+	method = method.toUpperCase()
+
+	let controller = new AbortController(),
+		signal = controller.signal,
+		options = { method, signal }
+
+	if (method === 'POST' || method === 'PUT') {
+		options.headers = { 'Content-Type': 'application/json' }
+		options.body = JSON.stringify(body)
 	}
 
-	return { get }
+	try {
+		setTimeout(() => controller.abort(), MAX_WAIT)
+		const response = await fetch(url, options)
+		if (!response.ok) throw new Error('Rejected request')
+
+		if (method === 'GET') {
+			return { data: await response.json() }
+		}
+		return { success: true }
+	} catch (error) {
+		return { error: error.message }
+	}
 }

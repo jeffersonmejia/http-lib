@@ -18,10 +18,10 @@ export async function http({ url, method = 'GET', body = null }) {
 		if (!response.ok) throw new Error('Rejected request')
 
 		if (method === 'GET') {
-			return { data: await response.json() }
+			return { data: await response.json(), error: null }
 		}
-		return { success: true }
+		return { data: null, error: null }
 	} catch (error) {
-		return { error: error.message }
+		return { data: null, error: error.message }
 	}
 }

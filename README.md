@@ -45,7 +45,13 @@ Make http request easily ⬆⬇
    		const response = await http({url:'https://example.com/posts'})
    		//post example
    		/*
-   		const response = await http({url:'https://example.com/posts/1'}, method'POST', body:{name:'Jeff', lastname:'Mejía',postContent:'I like coffee too much ☕'})
+   		const response = await http({url:'https://example.com/posts/1'},
+   		method'POST',
+   		body:{
+   			name:'Jeff',
+   			lastname:'Mejía',
+   			postContent:'I like coffee too much ☕'
+   			})
    		*/
    		console.log(response)
    	}catch(error){
@@ -53,7 +59,7 @@ Make http request easily ⬆⬇
    	}
     }
 
-   	document.addEventListener('DOMContentLoaded',(e)=>{
+   	document.addEventListener('DOMContentLoaded',async (e)=>{
    		await getPosts()
    	})
    ```

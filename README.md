@@ -16,7 +16,7 @@ Make http request easily ⬆⬇
 1. Download [git](https://git-scm.com/downloads) <img src='https://i.postimg.cc/4nGTxK8y/Git-Icon-1788-C.png' width="10"/> if you don't have it
 2. Secondly, in your prefered console <img src='https://i.postimg.cc/GmBZnx3K/7560719.png' width="12" alt="Terminal freepik by Royyan Wijaya"/> execute:
 
-   ```
+   ```powershell
    git clone https://github.com/jeffersonmejia/http-lib.git
    ```
 
@@ -24,25 +24,25 @@ Make http request easily ⬆⬇
 
 4. Update your JS script to type module
 
-   ```
+   ```html
    <script src="my-script.js" type="module"></script>
    ```
 
 5. Import "http-lib" from http.js pathname
 
-   ```
-   import http from "./pathname"
+   ```javascript
+   import http from './pathname'
    ```
 
 6. Use examples
 
-   ```
-   import http from "./lib/http-lib.js"
+   ```javascript
+   import http from './lib/http-lib.js'
 
-    async function getPosts(){
-   	try{
+   async function getPosts() {
+   	try {
    		// By default will use "GET" method
-   		const response = await http({url:'https://example.com/posts'})
+   		const response = await http({ url: 'https://example.com/posts' })
    		//post example
    		/*
    		const response = await http({url:'https://example.com/posts/1'},
@@ -54,16 +54,16 @@ Make http request easily ⬆⬇
    			})
    		*/
    		console.log(response)
-   	}catch(error){
+   	} catch (error) {
    		console.log(error)
    	}
-    }
+   }
 
-   	document.addEventListener('DOMContentLoaded',async (e)=>{
-   		await getPosts()
-   	})
+   document.addEventListener('DOMContentLoaded', async (e) => {
+   	await getPosts()
+   })
    ```
 
 ## 2. Author
 
-[Jefferson Mejía](https://jeffersonmejia.github.io/blog/) - Eng. Systems, Web developer </>
+[Jefferson Mejía](https://jeffersonmejia.github.io/blog/){:target="\_blank"} - Eng. Systems, Web developer

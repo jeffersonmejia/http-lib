@@ -20,21 +20,21 @@ Make http request easily ⬆⬇
    git clone https://github.com/jeffersonmejia/http-lib.git
    ```
 
-3. In root folder move "http.js" to your project folder
+3. In root folder move "http.js" or "http.ts" to your project folder
 
-4. Update your JS script to type module
+4. Update your JS/TS script to type module
 
    ```html
    <script src="my-script.js" type="module"></script>
    ```
 
-5. Import "http-lib" from http.js pathname
+5. Import "http-lib" from http.js or http.ts pathname
 
    ```javascript
    import http from './pathname'
    ```
 
-6. Use examples
+6. Use examples with JS
 
    ```javascript
    import http from './lib/http-lib.js'

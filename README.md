@@ -56,4 +56,4 @@ Make http request easily ⬆⬇
 
 ## 2. Author
 
-<a href="https://jeffersonmejia.github.io/blog" target="_blank">Jefferson Mejía</a> - Eng. Systems, Web developer
+[Jefferson Mejía](https://jeffersonmejia.github.io/blog) - Eng. Systems, Web developer

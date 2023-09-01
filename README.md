@@ -22,19 +22,25 @@ Make http request easily ⬆⬇
 
 3. In root folder move "http.js" or "http.ts" to your project folder
 
-4. Update your JS/TS script to type module
+4. Update your JS script to type module
 
    ```html
    <script src="my-script.js" type="module"></script>
    ```
 
-5. Import "http-lib" from http.js or http.ts pathname
+5. Import "http-lib" from http.js pathname
 
    ```javascript
    import http from './pathname'
    ```
 
-6. Use examples with JS
+6. If you're using TypeScript add this to your tsconfig.json
+
+```json
+		"allowJs": true ,
+```
+
+7. Use examples with
 
    ```javascript
    import http from './lib/http-lib.js'
